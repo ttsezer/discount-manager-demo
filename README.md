@@ -50,11 +50,11 @@ Vercel is a serverless platform. Because of this, SQLite cannot be used in produ
    * `SHOPIFY_API_SECRET`: Client secret from Partner Dashboard
    * `SHOPIFY_APP_URL`: Your live production Vercel URL
    * `SCOPES`: `read_discounts,write_discounts`
-   * `DATABASE_URL`: Your Postgres connection string
+   * `POSTGRES_URL`: Your Postgres connection string
 3. Deploy the application using Vercel.
-4. Run migrations against your remote database from your local machine:
+4. Run db push against your remote database from your local machine:
    ```bash
-   DATABASE_URL="your-production-postgres-url" npx prisma migrate deploy
+   POSTGRES_URL="your-production-postgres-url" npx prisma db push
    ```
 5. Update `application_url` and `redirect_urls` in `shopify.app.toml` to match your Vercel domain, then run:
    ```bash
