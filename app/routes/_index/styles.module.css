@@ -2,83 +2,72 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   text-align: center;
   padding: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f6f6f7;
-  box-sizing: border-box;
 }
 
-.heading {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #202223;
-  margin: 0 0 0.5rem 0;
+.heading,
+.text {
+  padding: 0;
+  margin: 0;
 }
 
 .text {
-  font-size: 0.95rem;
-  color: #6d7175;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
 }
 
 .content {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e1e3e5;
-  max-width: 28rem;
-  width: 100%;
-  box-sizing: border-box;
+  display: grid;
+  gap: 2rem;
 }
 
 .form {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
   gap: 1rem;
-  text-align: left;
 }
 
 .label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #202223;
+  display: grid;
+  gap: 0.2rem;
+  max-width: 20rem;
+  text-align: left;
+  font-size: 1rem;
 }
 
 .input {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #babfc3;
-  border-radius: 4px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s;
-  background: white;
-  color: #202223;
-}
-
-.input:focus {
-  border-color: #008060;
+  padding: 0.4rem;
 }
 
 .button {
-  background-color: #008060;
-  color: white;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  padding: 0.4rem;
 }
 
-.button:hover {
-  background-color: #006e52;
+.list {
+  list-style: none;
+  padding: 0;
+  padding-top: 3rem;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.list > li {
+  max-width: 20rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 50rem) {
+  .list {
+    display: block;
+  }
+
+  .list > li {
+    padding-bottom: 1rem;
+  }
 }
