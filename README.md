@@ -6,7 +6,7 @@ An embedded Shopify application to list, create, edit, and delete basic code dis
 * **Framework**: React Router v7 (React & Node.js backend)
 * **UI**: Shopify Polaris Web Components (`s-*` custom elements)
 * **GraphQL**: Shopify Admin API integration
-* **Session Storage**: Prisma ORM with SQLite (local development)
+* **Session Storage**: Prisma ORM with PostgreSQL (both local development and production)
 
 ## Getting Started
 
@@ -14,13 +14,18 @@ An embedded Shopify application to list, create, edit, and delete basic code dis
 * Install Node.js (matching version constraints in `package.json`)
 * Install [Shopify CLI](https://shopify.dev/docs/apps/tools/cli)
 * A Shopify Partner account and a development store
+* A running PostgreSQL database (local or remote hosted)
 
 ### Setup
 1. Install dependencies:
    ```bash
    npm install
    ```
-2. Initialize database schemas:
+2. Create a `.env` file in the root of the project and add your database URL:
+   ```env
+   POSTGRES_URL="postgresql://username:password@localhost:5432/your_database"
+   ```
+3. Initialize database schemas:
    ```bash
    npm run setup
    ```
